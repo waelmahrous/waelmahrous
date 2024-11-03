@@ -1,13 +1,18 @@
 import { PaletteMode } from "@mui/material";
-import { amber, deepOrange, grey } from "@mui/material/colors";
+import { grey } from "@mui/material/colors";
 
-const theme = {
-    palette: {
-        primary: amber,
-    },
-};
+const defaultColors = {
+    background: grey[900],
+    primary: "#a8a7a7",
+    secondary: "#ff4532",
+    tertiary: "#1ed760"
+}
 
 export const getDesignTokens = (mode: PaletteMode) => ({
+    typography: {
+        fontFamily: 'Poppins, Arial, sans-serif',
+    },
+
     palette: {
         mode,
         ...(mode === "light"
@@ -15,23 +20,34 @@ export const getDesignTokens = (mode: PaletteMode) => ({
                 primary: amber,
                 divider: amber[200],
                 text: {
-                    primary: grey[900],
+                    primary: "#a8a7a7",
                     secondary: grey[800],
                 },
             }
             : {
-                primary: deepOrange,
-                divider: deepOrange[700],
+                primary: { main: defaultColors.primary },
                 background: {
-                    default: deepOrange[900],
-                    paper: deepOrange[900],
+                    default: defaultColors.background
                 },
                 text: {
-                    primary: "#fff",
-                    secondary: grey[500],
+                    primary: defaultColors.primary,
+                    secondary: defaultColors.secondary,
+                    tertiary: defaultColors.tertiary
                 },
             }),
     },
-});
 
-export default theme;
+    components: {
+        MuiLink: {
+            styleOverrides: {
+                root: {
+                    color: defaultColors.secondary,
+                    textDecoration: 'none',
+                    '&:hover': {
+                        color: defaultColors.tertiary
+                    },
+                },
+            },
+        },
+    },
+});
