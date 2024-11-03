@@ -15,26 +15,15 @@ export const getDesignTokens = (mode: PaletteMode) => ({
 
     palette: {
         mode,
-        ...(mode === "light"
-            ? {
-                primary: amber,
-                divider: amber[200],
-                text: {
-                    primary: "#a8a7a7",
-                    secondary: grey[800],
-                },
-            }
-            : {
-                primary: { main: defaultColors.primary },
-                background: {
-                    default: defaultColors.background
-                },
-                text: {
-                    primary: defaultColors.primary,
-                    secondary: defaultColors.secondary,
-                    tertiary: defaultColors.tertiary
-                },
-            }),
+        primary: { main: defaultColors.primary },
+        background: {
+            default: defaultColors.background
+        },
+        text: {
+            primary: defaultColors.primary,
+            secondary: defaultColors.secondary,
+            tertiary: defaultColors.tertiary
+        },
     },
 
     components: {
