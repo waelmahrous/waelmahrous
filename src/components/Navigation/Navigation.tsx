@@ -14,17 +14,17 @@ function Navigation() {
             width: "100%",
 
             display: "flex",
-            justifyContent: "space-evenly",
+            justifyContent: "space-between",
             alignItems: "center",
         }}>
             <Link component={Button} onClick={() => setPage(<Home key={"Home"} />)}>
-                <Typography variant="h5"> Home. </Typography>
+                <Typography variant="h5"> Home </Typography>
             </Link>
-            <Link component={Button} onClick={() => setPage(<About key={"About"} />)}>
+            <Link disabled component={Button} onClick={() => setPage(<About key={"About"} />)}>
                 <Typography variant="h5"> About </Typography>
             </Link>
-            <Link component={Button} onClick={() => setPage(<Contact key={"Contact"} />)}>
-                <Typography variant="h5"> Contact. </Typography>
+            <Link disabled component={Button} onClick={() => setPage(<Contact key={"Contact"} />)}>
+                <Typography variant="h5"> Contact </Typography>
             </Link>
         </Box>
     )
