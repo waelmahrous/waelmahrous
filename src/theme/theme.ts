@@ -38,5 +38,23 @@ export const getDesignTokens = (mode: PaletteMode) => ({
                 },
             },
         },
+        MuiButton: {
+            defaultProps: {
+                disableRipple: true, // Disable ripple effect
+            },
+            styleOverrides: {
+                root: {
+                    "&:hover": {
+                        backgroundColor: "transparent", // Remove background on hover
+                    },
+                    "&:active": {
+                        backgroundColor: "transparent", // Remove background on click
+                    },
+                    "&:focus": {
+                        outline: "none", // Remove focus outline
+                    },
+                },
+            },
+        },
     },
 });
