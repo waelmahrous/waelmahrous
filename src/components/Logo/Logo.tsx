@@ -1,15 +1,29 @@
-import { Box } from '@mui/material'
+import { Box, Button, Link } from '@mui/material'
+
+
+import { LinkedIn, Instagram, GitHub } from '@mui/icons-material';
 
 function Logo() {
     return (
         <Box sx={{
             height: "100%",
             display: "flex",
-            justifyContent: "flex-start",
+            justifyContent: "space-between",
             alignItems: "center"
         }}
         >
-            Social Media Links (where are they...)
+            <Link href={"https://github.com/waelmahrous"} component={Button}>
+                <GitHub />
+            </Link>
+
+            <Link href={"https://instagram.com/_waelbm"} component={Button}>
+                <Instagram />
+            </Link>
+
+            <Link href={"https://linkedin.com/in/waelmahrous"} component={Button}>
+                <LinkedIn />
+            </Link>
+
         </Box>
     )
 }

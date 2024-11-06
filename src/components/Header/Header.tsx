@@ -10,10 +10,13 @@ function Header() {
             display: "flex",
             flexDirection: "row"
         }}>
-            <Box flex={2}>
+            <Box flex={1}>
                 <Logo />
             </Box>
-            <Box flex={1}>
+
+            <Box flex={8}/>
+
+            <Box flex={3}>
                 <Navigation />
             </Box>
         </Box>
