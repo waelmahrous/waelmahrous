@@ -1,29 +1,29 @@
-import { Box, Container, Link, Typography } from "@mui/material";
+import { Box, Container } from "@mui/material";
+import Home from "../Pages/Home/Home";
+import Header from "../Header/Header";
+import { PageProvider } from "../Pages/PageProvider";
 
 function MainDisplay() {
 	return (
-		<Container maxWidth="xl">
-			<Box
-				height={"100vh"}
-				display={"flex"}
-				// alignItems={"center"}
-				justifyContent={"center"}
-				flexDirection={"column"}
-			>
+		<PageProvider>
+			<Container maxWidth="xl">
+				<Box
+					height={"100vh"}
+					display={"flex"}
 
-				<Typography variant="h4" gutterBottom>
-					Welcome.
-				</Typography>
+					justifyContent={"center"}
+					flexDirection={"column"}
+				>
+					<Box flex={1}>
+						<Header />
+					</Box>
 
-				<Typography variant="body1" gutterBottom>
-					This site is still a work in progress, but feel free to connect with me on{' '}
-					<Link href="https://www.linkedin.com/in/waelmahrous">
-						LinkedIn
-					</Link>{' '}
-					in the meantime.
-				</Typography>
-			</Box>
-		</Container>
+					<Box flex={6}>
+						<Home />
+					</Box>
+				</Box>
+			</Container>
+		</PageProvider>
 	)
 }
 
