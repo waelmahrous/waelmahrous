@@ -23,10 +23,6 @@ function Home() {
                 </Link>{' '}
                 in the meantime.
             </Typography>
-
-            <Typography variant="body1" gutterBottom width={"100%"}>
-                Currently displaying <b>{page?.key}</b> ...
-            </Typography>
         </Box>
     )
 }

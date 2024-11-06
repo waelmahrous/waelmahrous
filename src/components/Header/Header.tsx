@@ -10,7 +10,7 @@ function Header() {
             display: "flex",
             flexDirection: "row"
         }}>
-            <Box flex={1}>
+            <Box flex={2}>
                 <Logo />
             </Box>
             <Box flex={1}>

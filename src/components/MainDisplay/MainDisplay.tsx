@@ -2,6 +2,7 @@ import { Box, Container } from "@mui/material";
 import Home from "../Pages/Home/Home";
 import Header from "../Header/Header";
 import { PageProvider } from "../Pages/PageProvider";
+import Footer from "../Footer/Footer";
 
 function MainDisplay() {
 	return (
@@ -20,6 +21,10 @@ function MainDisplay() {
 
 					<Box flex={6}>
 						<Home />
+					</Box>
+
+					<Box flex={1}>
+						<Footer />
 					</Box>
 				</Box>
 			</Container>
