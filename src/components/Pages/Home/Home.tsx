@@ -1,13 +1,6 @@
 import { Box, Link, Typography } from '@mui/material'
-import React, { useContext, useEffect } from 'react'
-import { PageContext } from '../PageProvider'
 
-type Props = {}
-
-function Home({ }: Props) {
-
-    const { page } = useContext(PageContext)!;
-
+function Home() {
     return (
         <Box sx={{
             height: "100%",

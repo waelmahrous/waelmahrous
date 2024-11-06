@@ -1,9 +1,6 @@
 import { Box } from '@mui/material'
-import React from 'react'
 
-type Props = {}
-
-function Logo({ }: Props) {
+function Logo() {
     return (
         <Box sx={{
             height: "100%",
