@@ -10,9 +10,34 @@ function Home() {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            flexDirection: "column"
+            flexDirection: "row"
 
         }}>
+            <Box sx={{
+                height: "100%",
+                width: "100%",
+
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexDirection: "column",
+
+            }} flex={1}>
+                <Typography variant="h3" gutterBottom width={"100%"}>
+                    Welcome.
+                </Typography>
+
+                <Typography variant="body1" gutterBottom width={"100%"}>
+                    This site is still a work in progress, but feel free to connect with me on{' '}
+                    <Link href="https://www.linkedin.com/in/waelmahrous">
+                        LinkedIn
+                    </Link>{' '}
+                    in the meantime.
+                    <br /> <br />
+                    Or just enjoy the fireworks :)
+                </Typography>
+            </Box>
+
             <TerminalComponent />
         </Box>
     )

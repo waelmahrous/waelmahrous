@@ -1,8 +1,10 @@
 import { Box, Container } from "@mui/material";
 import Home from "../Pages/Home/Home";
 import Header from "../Header/Header";
-import { PageProvider } from "../Pages/PageProvider";
+import { PageContext, PageProvider } from "../Pages/PageProvider";
 import Footer from "../Footer/Footer";
+import { useContext } from "react";
+import Content from "../Content/Content";
 
 function MainDisplay() {
 	return (
@@ -20,7 +22,7 @@ function MainDisplay() {
 					</Box>
 
 					<Box flex={6}>
-						<Home />
+						<Content />
 					</Box>
 
 					<Box flex={1}>
