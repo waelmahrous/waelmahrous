@@ -1,5 +1,5 @@
 import { Box, Link, Typography } from '@mui/material'
-import Terminal from '../../Terminal/Terminal'
+import TerminalComponent from '../../Terminal/TerminalComponent'
 
 function Home() {
     return (
@@ -13,7 +13,7 @@ function Home() {
             flexDirection: "column"
 
         }}>
-            <Terminal />
+            <TerminalComponent />
         </Box>
     )
 }
