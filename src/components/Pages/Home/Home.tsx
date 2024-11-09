@@ -1,4 +1,5 @@
 import { Box, Link, Typography } from '@mui/material'
+import Terminal from '../../Terminal/Terminal'
 
 function Home() {
     return (
@@ -12,17 +13,7 @@ function Home() {
             flexDirection: "column"
 
         }}>
-            <Typography variant="h3" gutterBottom width={"100%"}>
-                Welcome.
-            </Typography>
-
-            <Typography variant="body1" gutterBottom width={"100%"}>
-                This site is still a work in progress, but feel free to connect with me on{' '}
-                <Link href="https://www.linkedin.com/in/waelmahrous">
-                    LinkedIn
-                </Link>{' '}
-                in the meantime.
-            </Typography>
+            <Terminal />
         </Box>
     )
 }
