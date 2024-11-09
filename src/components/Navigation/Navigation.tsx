@@ -4,6 +4,7 @@ import About from "../Pages/About/About";
 import Contact from "../Pages/Contact/Contact";
 import { useContext } from "react";
 import { PageContext } from "../Pages/PageProvider";
+import Terminal from "../Pages/Terminal/Terminal";
 
 function Navigation() {
     const { setPage } = useContext(PageContext)!;
@@ -20,8 +21,8 @@ function Navigation() {
             <Link component={Button} onClick={() => setPage(<Home key={"Home"} />)}>
                 <Typography variant="h5"> Home </Typography>
             </Link>
-            <Link disabled component={Button} onClick={() => setPage(<About key={"About"} />)}>
-                <Typography variant="h5"> About </Typography>
+            <Link component={Button} onClick={() => setPage(<Terminal key={"Terminal"} />)}>
+                <Typography variant="h5"> Terminal </Typography>
             </Link>
             <Link disabled component={Button} onClick={() => setPage(<Contact key={"Contact"} />)}>
                 <Typography variant="h5"> Contact </Typography>
