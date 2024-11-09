@@ -1,8 +1,7 @@
 import { PaletteMode } from "@mui/material";
-import { grey } from "@mui/material/colors";
 
-const defaultColors = {
-    background: grey[900],
+export const defaultColors = {
+    background: "rgb(21, 21, 21)",
     primary: "#a8a7a7",
     secondary: "#ff4532",
     tertiary: "#1ed760"
