@@ -1,9 +1,7 @@
 import { Box, Container } from "@mui/material";
-import Home from "../Pages/Home/Home";
 import Header from "../Header/Header";
-import { PageContext, PageProvider } from "../Pages/PageProvider";
+import { PageProvider } from "../Pages/PageProvider";
 import Footer from "../Footer/Footer";
-import { useContext } from "react";
 import Content from "../Content/Content";
 
 function MainDisplay() {

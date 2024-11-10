@@ -1,6 +1,5 @@
 import { Box, Button, Link, Typography } from "@mui/material";
 import Home from "../Pages/Home/Home";
-import About from "../Pages/About/About";
 import Contact from "../Pages/Contact/Contact";
 import { useContext } from "react";
 import { PageContext } from "../Pages/PageProvider";
