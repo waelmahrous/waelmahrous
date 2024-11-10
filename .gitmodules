@@ -1,6 +1,3 @@
-[submodule "slides"]
-	path = slides
-	url = git@github.com:waelmahrous/slides.git
 [submodule "gotty"]
 	path = gotty
 	url = git@github.com:yudai/gotty.git
