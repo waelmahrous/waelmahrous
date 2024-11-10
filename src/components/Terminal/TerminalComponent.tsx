@@ -14,7 +14,7 @@ const TerminalComponent = () => {
         if (elem !== null) {
             var term = new Hterm(elem);
 
-            const url = "ws://localhost:8080/ws";
+            const url = "wss://fd7d-2a02-aa1-1043-3b52-c05b-e384-8022-4e91.ngrok-free.app/ws"
             const args = "";
             const factory = new ConnectionFactory(url, protocols);
 
