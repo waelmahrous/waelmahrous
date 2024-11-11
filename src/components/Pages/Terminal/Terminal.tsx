@@ -29,6 +29,10 @@ function Terminal() {
                 The fireworks you see here, as well as on the homepage, are actually being generated on a server in my apartment in Malmö! <br />
                 You are currently viewing a terminal session hosted through Gotty, with access provided via an ngrok tunnel.
             </Typography>
+
+            <Typography>
+                Beacuse why not ¯\_(ツ)_/¯
+            </Typography>
         </Box>
     )
 }
