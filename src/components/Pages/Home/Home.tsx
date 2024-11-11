@@ -35,7 +35,7 @@ function Home() {
                     </Link>{' '}
                     in the meantime.
                     <br /> <br />
-                    Or just enjoy the fireworks (it takes a few seconds to load)
+                    Or just enjoy the fireworks!
                 </Typography>
             </Box>
 

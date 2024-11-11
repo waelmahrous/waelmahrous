@@ -4,6 +4,7 @@ import { WebTTY, protocols } from "../../../gotty/js/src/webtty";
 import { ConnectionFactory } from "../../../gotty/js/src/websocket";
 import { Box } from "@mui/material";
 import { defaultColors } from "../../theme/theme";
+import { auth } from "../../auth";
 
 const TerminalComponent = () => {
     const [ready, setReady] = useState(false)
@@ -18,7 +19,7 @@ const TerminalComponent = () => {
             const args = "";
             const factory = new ConnectionFactory(url, protocols);
 
-            const wt = new WebTTY(term, factory, args, "user:password");
+            const wt = new WebTTY(term, factory, args, auth);
             const closer = wt.open();
 
             term.term.prefs_.set('font-family', '"Courier Bold", "Lucida Console", "Courier New", "Roboto Mono", monospace');
@@ -30,22 +31,11 @@ const TerminalComponent = () => {
             term.term.prefs_.set('scroll-on-keystroke', false);
             term.term.prefs_.set('scrollbar-visible', false);
 
-            const randomInterval = () => {
-                return Math.random() * (3000 - 500) + 500;
-            };
-
-            const sendRandomKeystrokes = () => {
-                term.io.sendString("!")
-
-                setTimeout(sendRandomKeystrokes, randomInterval());
-            };
-
             window.addEventListener("unload", () => {
                 closer();
                 term.close();
             });
 
-            sendRandomKeystrokes();
             term.term.scrollOnKeystroke_ = false
 
             term.term.onTerminalReady = () => {
@@ -64,6 +54,7 @@ const TerminalComponent = () => {
             position: "relative",
             height: "100%",
             width: "100%",
+            pointerEvents: "none",
 
             opacity: ready ? "100%" : "0%"
         }} />
