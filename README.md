@@ -2,7 +2,7 @@
 
 #### My name is Wael Mahrous, welcome to my Github page!
 
-I am a recent Computer Science & Engineering graduate excited to help out and learn along the way. I enjoy engineering because it keeps me learning new tools that help me tackle challenges, which I always welcome.
+I am a recent Computer Science & Engineering graduate excited to help out and learn along the way.
 
 <!-- Languages -->
 ![languages](https://img.shields.io/static/v1?label=&message=languages:&color=111&style=flat-square)
