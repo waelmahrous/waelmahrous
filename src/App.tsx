@@ -5,11 +5,7 @@ import { CssBaseline, ThemeProvider } from '@mui/material';
 import MainDisplay from './components/MainDisplay/MainDisplay'
 import { useThemeContext } from './theme/ContextProvider';
 import { motion } from 'motion/react';
-
-const variants = {
-    visible: { opacity: 1 },
-    hidden: { opacity: 0 },
-}
+import { variants } from './animation/DefaultVariants';
 
 function App() {
     const { theme } = useThemeContext()
@@ -20,7 +16,7 @@ function App() {
             <motion.div
                 variants={variants}
                 initial="hidden"
-                animate="visible"
+                animate="visibleFast"
             >
                 <MainDisplay />
             </motion.div>

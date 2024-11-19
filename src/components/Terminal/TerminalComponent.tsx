@@ -29,6 +29,7 @@ const TerminalComponent = () => {
             term.term.prefs_.set('scroll-on-output', false);
             term.term.prefs_.set('scroll-on-keystroke', false);
             term.term.prefs_.set('scrollbar-visible', false);
+            term.term.prefs_.set('cursor-color', defaultColors.background);
 
             window.addEventListener("unload", () => {
                 closer();
@@ -38,7 +39,9 @@ const TerminalComponent = () => {
             term.term.scrollOnKeystroke_ = false
 
             term.term.onTerminalReady = () => {
-                setReady(true)
+                setTimeout(()=> {
+                    setReady(true)
+                }, 2000)
             }
 
             return () => {
