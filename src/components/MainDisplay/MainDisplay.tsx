@@ -7,7 +7,7 @@ import Content from "../Content/Content";
 function MainDisplay() {
 	return (
 		<PageProvider>
-			<Container maxWidth="xl">
+			<Container>
 				<Box
 					height={"100vh"}
 					display={"flex"}
