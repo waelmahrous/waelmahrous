@@ -1,12 +1,14 @@
 import { Box, Button, Link, Typography } from "@mui/material";
 import Home from "../Pages/Home/Home";
 import Contact from "../Pages/Contact/Contact";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { PageContext } from "../Pages/PageProvider";
 import Terminal from "../Pages/Terminal/Terminal";
 
 function Navigation() {
-    const { setPage } = useContext(PageContext)!;
+    const { page, setPage, setLanded } = useContext(PageContext)!;
+
+    useEffect(() => { setLanded(true) }, [page])
 
     return (
         <Box sx={{

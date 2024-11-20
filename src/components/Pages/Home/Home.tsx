@@ -2,8 +2,12 @@ import { Box, Link, Typography } from '@mui/material'
 import TerminalComponent from '../../Terminal/TerminalComponent'
 import { motion } from 'motion/react'
 import { variants } from '../../../animation/DefaultVariants'
+import { PageContext } from '../PageProvider'
+import { useContext } from 'react'
 
 function Home() {
+    const {landed} = useContext(PageContext)!
+
     return (
         <Box sx={{
             height: "100%",
@@ -33,7 +37,7 @@ function Home() {
                 <motion.div
                     variants={variants}
                     initial="hidden"
-                    animate="visibleSlow"
+                    animate={landed ? "visibleFast" : "visibleSlow"}
                 >
 
                     <Typography variant="body1" gutterBottom width={"100%"}>
