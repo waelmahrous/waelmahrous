@@ -1,35 +1,45 @@
 import { Box, Container } from "@mui/material";
 import Header from "../Header/Header";
-import { PageProvider } from "../Pages/PageProvider";
-import Footer from "../Footer/Footer";
+import { PageContext, PageProvider } from "../Pages/PageProvider";
 import Content from "../Content/Content";
+import { motion } from "motion/react";
+import { variants } from "../../animation/DefaultVariants";
+import { useContext } from "react";
+
+const MotionBox = motion.create("div")
 
 function MainDisplay() {
-	return (
-		<PageProvider>
-			<Container maxWidth="xl">
-				<Box
-					height={"100vh"}
-					display={"flex"}
+    const { landed } = useContext(PageContext)!
 
-					justifyContent={"center"}
-					flexDirection={"column"}
-				>
-					<Box flex={1}>
-						<Header />
-					</Box>
+    return (
+        <Container>
+            <Box
+                height={"100vh"}
+                display={"flex"}
 
-					<Box flex={6}>
-						<Content />
-					</Box>
+                justifyContent={"center"}
+                flexDirection={"column"}
+            >
+                <MotionBox
+                    variants={variants}
+                    initial="hidden"
+                    animate={landed ? "visibleFast" : "visibleSlow"}
+                    style={{
+                        flex: 1,
+                        height: "100%",
+                        width: "100%",
+                        display: "flex",
+                        flexDirection: "row"
+                    }}>
+                    <Header />
+                </MotionBox>
 
-					<Box flex={1}>
-						<Footer />
-					</Box>
-				</Box>
-			</Container>
-		</PageProvider>
-	)
+                <Box flex={6}>
+                    <Content />
+                </Box>
+            </Box>
+        </Container>
+    )
 }
 
 export default MainDisplay

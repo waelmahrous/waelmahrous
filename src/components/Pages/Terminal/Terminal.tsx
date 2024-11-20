@@ -11,7 +11,8 @@ function Terminal() {
             alignItems: "center",
             justifyContent: "center",
             flexDirection: "column",
-            gap: 5
+            gap: 5,
+            padding: 5
 
         }}>
             <Box
