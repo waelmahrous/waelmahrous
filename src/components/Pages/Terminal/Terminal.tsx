@@ -32,7 +32,7 @@ function Terminal() {
             </Typography>
 
             <Typography>
-                Beacuse why not ¯\_(ツ)_/¯
+                Because why not ¯\_(ツ)_/¯
             </Typography>
         </Box>
     )
