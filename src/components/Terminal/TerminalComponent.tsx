@@ -15,12 +15,6 @@ const TerminalComponent = () => {
         if (elem !== null) {
             var term = new Hterm(elem);
 
-            const args = "";
-            const factory = new ConnectionFactory(url, protocols);
-
-            const wt = new WebTTY(term, factory, args, auth);
-            const closer = wt.open();
-
             term.term.prefs_.set('font-family', '"Courier Bold", "Lucida Console", "Courier New", "Roboto Mono", monospace');
             term.term.prefs_.set('font-size', 20);
             term.term.prefs_.set('foreground-color', '#33FF33');
@@ -31,6 +25,12 @@ const TerminalComponent = () => {
             term.term.prefs_.set('scrollbar-visible', false);
             term.term.prefs_.set('cursor-color', defaultColors.background);
 
+            const args = "";
+            const factory = new ConnectionFactory(url, protocols);
+
+            const wt = new WebTTY(term, factory, args, auth);
+            const closer = wt.open();
+
             window.addEventListener("unload", () => {
                 closer();
                 term.close();
@@ -39,9 +39,9 @@ const TerminalComponent = () => {
             term.term.scrollOnKeystroke_ = false
 
             term.term.onTerminalReady = () => {
-                setTimeout(()=> {
+                setTimeout(() => {
                     setReady(true)
-                }, 2000)
+                }, 500);
             }
 
             return () => {
